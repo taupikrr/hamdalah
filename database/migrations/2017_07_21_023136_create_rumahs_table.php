@@ -1,0 +1,42 @@
+<?php
+
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class CreateRumahsTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('rumahs', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('tipe_rumah');
+            $table->string('harga_rumah');
+            $table->string('luas_tanah');
+            $table->integer('jumlah_lantai');
+            $table->integer('kamar_tidur');
+            $table->integer('kamar_mandi');
+            $table->string('alamat');
+            $table->integer('agen_id')->unsigned();
+            $table->string('foto')->nullable();
+            $table->timestamps();
+
+            $table->foreign('agen_id')->references('id')->on('agens')->onUpdate('cascade')->onDelete('cascade');
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('rumahs');
+    }
+}
