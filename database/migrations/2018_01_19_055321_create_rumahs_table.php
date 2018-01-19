@@ -22,11 +22,13 @@ class CreateRumahsTable extends Migration
             $table->integer('kamar_tidur');
             $table->integer('kamar_mandi');
             $table->string('alamat');
+            $table->integer('jenis_id')->unsigned();
             $table->integer('agen_id')->unsigned();
             $table->string('foto')->nullable();
             $table->timestamps();
 
             $table->foreign('agen_id')->references('id')->on('agens')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('jenis_id')->references('id')->on('jenis')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 

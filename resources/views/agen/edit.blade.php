@@ -11,7 +11,7 @@
                 <a href="{{ URL::previous() }}">Kembali</a></div></div>
 
                    <div class="panel-body">
-              <form action="{{route('rumah.update',$agen->id)}}" method="POST" enctype="multipart/form-data">
+              <form action="{{route('agen.update',$agen->id)}}" method="POST" enctype="multipart/form-data">
               <input type="hidden" name="_method" value="PUT">
               <input type="hidden" name="_token" value="{{ csrf_token() }}">
 

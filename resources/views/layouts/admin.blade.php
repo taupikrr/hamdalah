@@ -128,6 +128,7 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="{{route('rumah.index')}}"><i class="fa fa-circle-o"></i>Rumah</a></li>
+            <li><a href="{{route('jenis.index')}}"><i class="fa fa-circle-o"></i>Perumahan</a></li>
             <li><a href="{{route('agen.index')}}"><i class="fa fa-circle-o"></i>Agen</a></li>
            
 
@@ -154,8 +155,7 @@
     <div class="pull-right hidden-xs">
       <b>Version</b> 2.4.0
     </div>
-    <strong>Copyright &copy; 2014-2016 <a href="https://adminlte.io">Almsaeed Studio</a>.</strong> All rights
-    reserved.
+    <strong>© 2018 Pemasaran Rumah Masa Kini<a href="https://adminlte.io"></a>.</strong> 
   </footer>
 
   <!-- Add the sidebar's background. This div must be placed

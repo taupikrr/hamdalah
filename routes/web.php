@@ -29,3 +29,6 @@ Route::get('/tampilann','tampilanController@index');
 Route::get('/home', 'HomeController@index');
 Route::resource('/rumah','rumahController');
 Route::resource('/agen','agenController');
+Route::resource('/jenis','jeniscontroller');
+
+Route::get('/perumahan/{perumahan}','HomeController@filter');

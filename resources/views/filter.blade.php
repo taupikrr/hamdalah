@@ -1,26 +1,12 @@
 @extends('layouts.user')
 
 @section('content')
-    
-    <div class="container">
-        <div class="row">
-            <div class="slider">
-                <div class="img-responsive">
-                    <ul class="bxslider">               
-                        <li><img src="img/oo.jpg" alt="" height="600" width="1200"/></li>                             
-                        <li><img src="img/bb.jpg" alt="" height="600" width="1200"/></li> 
-                        <li><img src="img/cc.jpg" alt="" height="600" width="1200"/></li>         
-                    </ul>
-                </div>  
-            </div>
-        </div>
-    </div>
-        
-    <div class="container">
+
+<div class="container">
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
                 <div class="text-center">
-                    <h2>Profile Perumahan</h2>
+                    <h2>Daftar Perumahan</h2>
                     
                 </div>
                 <hr>
@@ -30,10 +16,24 @@
     
                        
     <div class="content">
+    	<div class="row">
+    		<div class="col-md-12">
+    			<center><h1>Perumahan {{$nama->jenis}}</h1></center>
+    		</div>
+    	</div>
+    	<div class="row">
+    		<div class="col-md-12">
+    			<center>Hasil Pencarian ({{$count}})</center>
+    		</div>
+    	</div>
         <div class="grid">
-    @foreach ($rumah as $data)
+        	
+        	@if($count == 0)
+        	Tidak ada hasil
+        	@endif
+    @foreach ($model as $data)
             <figure class="effect-zoe">
-                <img src="img/{{$data->foto}}" alt="img"/>
+                <img src="{{asset('/img/'.$data->foto)}}" alt="img"/>
                 <figcaption>
                     <h2>Type <span> {{$data->tipe_rumah}}</span></h2>
                     <p class="icon-links">
@@ -43,11 +43,11 @@
                 </figcaption>           
             </figure>
     @endforeach
-</div>
-</div>
+
         </div>
     </div>
     
     
     
 @endsection
+

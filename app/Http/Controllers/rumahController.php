@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\agen;
 use App\rumah;
+use App\jenis;
 use Yajra\Datatables\Html\Builder;
 use Yajra\Datatables\Datatables;
 use Session;
@@ -34,8 +35,9 @@ class rumahController extends Controller
     public function create()
     {
          $agen=agen::all();
+         $jenis=jenis::all();
          $rumah=rumah::all();
-         return view('rumah.create', compact('agen','rumah'));
+         return view('rumah.create', compact('agen','rumah','jenis'));
     }
 
     /**
@@ -56,6 +58,7 @@ class rumahController extends Controller
         $rumah->kamar_mandi= $request->g;
         $rumah->alamat= $request->h;
         $rumah->agen_id=$request->agen_id;
+        $rumah->jenis_id=$request->jenis_id;
         
         if($request->hasFile('foto'))
         {
@@ -95,7 +98,8 @@ class rumahController extends Controller
         //
         $rumah=rumah::findOrFail($id);
         $agen=agen::all();
-        return view('rumah.edit',compact('rumah','agen'));
+        $jenis=jenis::all();
+        return view('rumah.edit',compact('rumah','agen','jenis'));
     }
 
     /**
@@ -117,6 +121,7 @@ class rumahController extends Controller
         $rumah->kamar_mandi= $request->g;
         $rumah->alamat= $request->h;
         $rumah->agen_id=$request->agen_id;
+        $rumah->jenis_id=$request->jenis_id;
         
         if($request->hasFile('foto'))
         {

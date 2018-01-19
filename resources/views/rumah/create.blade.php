@@ -57,7 +57,17 @@
                     <option value="{{$data->id}}">{{$data->nama}}</option>
                     @endforeach
                   </select>
-                  </div>             
+                  </div>      
+
+                  <div class="form-group">
+                  <label class="control_label">Nama Perumahan</label>
+                  <select class="form-control" name="jenis_id" required="">
+                    <option value="">Pilih Salah Satu</option>
+                    @foreach($jenis as $data)
+                    <option value="{{$data->id}}">{{$data->jenis}}</option>
+                    @endforeach
+                  </select>
+                  </div>       
         
 
                   <div class="form-group">

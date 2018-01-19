@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\rumah;
+use App\jenis;
 class HomeController extends Controller
 {
     /**
@@ -24,5 +25,13 @@ class HomeController extends Controller
     public function index()
     {
         return view('home');
+    }
+    public function filter($perumahan)
+    {
+
+        $model = rumah::where('jenis_id',$perumahan)->get();
+        $count = rumah::where('jenis_id',$perumahan)->count();
+        $nama = jenis::find($perumahan);
+       return view('filter',compact('model','count','nama'));
     }
 }

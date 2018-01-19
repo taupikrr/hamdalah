@@ -55,12 +55,25 @@
                  <div class="form-group">
                   <label class="control_label">Agen</label>
                   <select class="form-control" name="agen_id" required="">
-                    <option value="">Pilih Salah Satu</option>
+                    <option value="">Pilih Salah Satu</option
                     @foreach($agen as $data)
                     @if($rumah->agens->id == $data->id)
                     <option value="{{$data->id}}" selected="">{{$data->nama}}</option>
                     @endif
                     <option value="{{$data->id}}">{{$data->nama}}</option>
+                    @endforeach
+                  </select>
+                  </div>
+
+                  <div class="form-group">
+                  <label class="control_label">Nama Perumahan</label>
+                  <select class="form-control" name="jenis_id" required="">
+                    <option value="">Pilih Salah Satu</option
+                    @foreach($jenis as $data)
+                    @if($rumah->jenis->id == $data->id)
+                    <option value="{{$data->id}}" selected="">{{$data->jenis}}</option>
+                    @endif
+                    <option value="{{$data->id}}">{{$data->jenis}}</option>
                     @endforeach
                   </select>
                   </div>

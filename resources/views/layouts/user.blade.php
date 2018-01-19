@@ -39,11 +39,19 @@
             <div class="navbar-collapse collapse">                          
                 <div class="menu">
                     <ul class="nav nav-tabs" role="tablist">
-                        <li role="presentation" class="active"><a href="index.html">Home</a></li>
-                        {{-- <li role="presentation"><a href="services.html">Services</a></li>--}}
-                        {{-- <li role="presentation"><a href="blog.html">Blog</a></li>--}}
-                        {{-- <li role="presentation"><a href="portfolio.html">Portfolio</a></li>--}}
-                        {{-- <li role="presentation"><a href="contact.html">Contact</a></li>--}}                     
+                        <li role="presentation"><a href="/">Home</a></li>
+                        <li class="dropdown" role="presentation">
+                          <a data-toggle="dropdown">Daftar Perumahan</a>
+                          <ul class="dropdown-menu">
+                            @php
+                            $model = App\jenis::all();
+                            @endphp
+                            @foreach($model as $data)
+                            <li><a href="{{url('/perumahan/'.$data->id)}}">{{$data->jenis}}</a></li>
+                            @endforeach
+                          </ul>
+                        </li>
+                        <li role="presentation"><a href="contact.html">Contact</a></li>                     
                     </ul>
                 </div>
             </div>          
@@ -71,7 +79,7 @@
             <div class="container">
                 <div class="row">
                     <div class="copyright">
-                        © 2018 Pemasaran Rumah </a>
+                        © 2018 Pemasaran Rumah Masa Kini </a>
                     </div>  
                     <!-- 
                         All links in the footer should remain intact. 
@@ -82,13 +90,13 @@
             </div>
             <div class="container">
                 <div class="row">
-                    <ul class="social-network">
+                    <!--<ul class="social-network">
                         <li><a href="#" data-placement="top" title="Facebook"><i class="fa fa-facebook fa-1x"></i></a></li>
                         <li><a href="#" data-placement="top" title="Twitter"><i class="fa fa-twitter fa-1x"></i></a></li>
                         <li><a href="#" data-placement="top" title="Linkedin"><i class="fa fa-linkedin fa-1x"></i></a></li>
                         <li><a href="#" data-placement="top" title="Pinterest"><i class="fa fa-pinterest fa-1x"></i></a></li>
                         <li><a href="#" data-placement="top" title="Google plus"><i class="fa fa-google-plus fa-1x"></i></a></li>
-                    </ul>
+                    </ul> -->
                 </div>
             </div>
             
