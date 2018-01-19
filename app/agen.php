@@ -16,6 +16,6 @@ class agen extends Model
 
     public function rumahs()
     {
-    	return $this->hasMany('App\rumah');
+    	return $this->hasMany('App\rumah','agen_id');
     }
 }

@@ -11,12 +11,16 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+
 Route::get('/a', function () {
     return view('layouts.admin');
 });
+
+Route::resource('/','GuestController');
+
+Route::get('/detail/{id}', 'GuestController@detail');
+
 Route::resource('rumah','RumahController');
 Auth::routes();
 

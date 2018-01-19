@@ -15,7 +15,7 @@
                 	<tr>
                 		<th>Nama</th>
                 		<th>Jenis Kelamin</th>
-                        <th>No HP</th>
+                        <th>Hubungi</th>
                         <th>Email</th>
                         <th>Foto Agen</th>
                 	

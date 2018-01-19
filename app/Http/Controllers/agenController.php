@@ -60,7 +60,7 @@ class agenController extends Controller
             $destinationPath=public_path().
             DIRECTORY_SEPARATOR.'img';
             $agens->move($destinationPath, $filename);
-            $agens->foto=$filename;
+            $agen->fotoagen=$filename;
             
         }
 
@@ -115,7 +115,7 @@ class agenController extends Controller
             $destinationPath=public_path().
             DIRECTORY_SEPARATOR.'img';
             $agens->move($destinationPath, $filename);
-            $rumah->foto=$filename;
+            $agen->fotoagen=$filename;
             
         }
 

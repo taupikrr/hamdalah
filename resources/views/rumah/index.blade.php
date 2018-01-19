@@ -15,30 +15,32 @@
                 	<tr>
                         <th>Foto Agen</th>
                 		<th>Nama Agen</th>
-                        <th>No Hp</th>
+                        <th>Hubungi</th>
                         <th>Tipe Rumah</th>
                         <th>Harga Rumah</th>
                         <th>Luas Tanah</th>
                         <th>Jumlah Lantai</th>
                         <th>Kamar Tidur</th>
                         <th>Kamar Mandi</th>
-                		<th>Foto Rumah</th>
                         <th>Alamat</th>
+                        <th>Foto Rumah</th>
                 	
                 		<th colspan="2">Action</th>
                 	</tr>
                 </thead>
 
                 	<tbody>
-                		@foreach($rumah as $data)
+                        @php
+                        $model = App\rumah::all();
+                        @endphp
+                		@foreach($model as $data)
                 		<tr>
-                            <td><img class="img-rounded" src="{{asset('/img/'.$data->fotoagen)}}" height="100" width="100" ></td>
-                            <td>{{$data->agen->fotoagen}}</td>
-                            <td>{{$data->agen->nama}}</td>
-                            <td>{{$data->agen->no_hp}}</td>
+                            <td><img class="img-rounded" src="{{asset('/img/'.$data->agens->fotoagen)}}" height="100" width="100" ></td>
+                            <td>{{$data->agens->nama}}</td>
+                            <td>{{$data->agens->no_hp}}</td>
                             <td>{{$data->tipe_rumah}}</td>
                             <td>{{$data->harga_rumah}}</td>
-                            <td>{{$data->luas_tanah}}</td>
+                            <td>{{$data->luas_tanah}} <sup>2</sup></td>
                             <td>{{$data->jumlah_lantai}}</td>
                             <td>{{$data->kamar_tidur}}</td>
                             <td>{{$data->kamar_mandi}}</td>
@@ -58,10 +60,9 @@
                                 {{csrf_field()}}
                                     </td>
                                 </form>
-                				
-                				@endforeach
                 			</td>
                 		</tr>
+                        @endforeach
                 	</tbody>
                 </table>
                 	

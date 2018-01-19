@@ -51,8 +51,8 @@
 
                    <div class="form-group">
                   <label class="control_label">Agen</label>
-                  <select class="form-control" name="agen_id">
-                    
+                  <select class="form-control" name="agen_id" required="">
+                    <option value="">Pilih Salah Satu</option>
                     @foreach($agen as $data)
                     <option value="{{$data->id}}">{{$data->nama}}</option>
                     @endforeach

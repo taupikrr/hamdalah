@@ -13,6 +13,6 @@ class rumah extends Model
 
     public function agens()
     {
-    	return $this->belongsTo('App\agen');
+    	return $this->belongsTo('App\agen','agen_id');
     }
 }

@@ -22,7 +22,7 @@ class rumahController extends Controller
     public function index()
     {
         //
-         $rumah = rumah::all();
+        $rumah = rumah::all();
         return view('rumah.index',compact('rumah'));
     }
 
@@ -94,7 +94,8 @@ class rumahController extends Controller
     {
         //
         $rumah=rumah::findOrFail($id);
-        return view('rumah.edit',compact('rumah'));
+        $agen=agen::all();
+        return view('rumah.edit',compact('rumah','agen'));
     }
 
     /**
