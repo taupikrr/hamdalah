@@ -51,7 +51,7 @@
                             @endforeach
                           </ul>
                         </li>
-                        <li role="presentation"><a href="contact.html">Contact</a></li>                     
+                        <li role="presentation"><a href="/">Contact</a></li>                     
                     </ul>
                 </div>
             </div>          

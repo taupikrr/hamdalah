@@ -8,6 +8,10 @@
 			<div class="col-md-8">
 				<div class="page-header">
 					<div class="blog">
+						<div class="panel-title pull-right">
+							<br>
+							<br>
+
 				      <img class="img-rounded" src="{{asset('/img/'.$rumah->foto)}}" height="500" width="500" >
 
 						
