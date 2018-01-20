@@ -30,5 +30,6 @@ Route::get('/home', 'HomeController@index');
 Route::resource('/rumah','rumahController');
 Route::resource('/agen','agenController');
 Route::resource('/jenis','jeniscontroller');
+Route::resource('/kontak','kontakController');
 
 Route::get('/perumahan/{perumahan}','HomeController@filter');

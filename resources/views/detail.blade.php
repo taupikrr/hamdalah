@@ -7,11 +7,15 @@
 		<div class="row">
 			<div class="col-md-8">
 				<div class="page-header">
-					<div class="blog">
-						<div class="panel-title pull-right">
-							<br>
-							<br>
 
+					<div class="blog">
+						<br>
+					<br>
+					<div class="panel-title pull-right">
+                <a href="{{ URL::previous() }}">Kembali</a></div>
+						<br>
+						<br>
+						<div class="panel-title pull-right">
 				      <img class="img-rounded" src="{{asset('/img/'.$rumah->foto)}}" height="500" width="500" >
 
 						

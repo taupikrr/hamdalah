@@ -130,6 +130,7 @@
             <li><a href="{{route('rumah.index')}}"><i class="fa fa-circle-o"></i>Rumah</a></li>
             <li><a href="{{route('jenis.index')}}"><i class="fa fa-circle-o"></i>Perumahan</a></li>
             <li><a href="{{route('agen.index')}}"><i class="fa fa-circle-o"></i>Agen</a></li>
+            <li><a href="{{route('kontak.index')}}"><i class="fa fa-circle-o"></i>Kontak</a></li>
            
 
           </ul>

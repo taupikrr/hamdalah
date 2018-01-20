@@ -21,6 +21,11 @@
                     </tr>
                 </thead>
 
+                     <tbody>
+                        @php
+                        $model = App\kontak::all();
+                        @endphp
+                        @foreach($model as $data)   
                      <tr>
                             <td>{{$data->email}}</td>
                             <td>{{$data->seluler}}</td>
@@ -39,7 +44,7 @@
                             </td>
                         </tr>
                         
-                    
+                        @endforeach
                 </table>
                     </div>
                

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\kontak;
 
 class kontakController extends Controller
 {
@@ -14,6 +15,8 @@ class kontakController extends Controller
     public function index()
     {
         //
+        $kontak = kontak::all();
+        return view('kontak.index',compact('kontak'));
     }
 
     /**
@@ -24,6 +27,8 @@ class kontakController extends Controller
     public function create()
     {
         //
+         $kontak=kontak::all();
+         return view('kontak.create', compact('kontak'));
     }
 
     /**
@@ -35,6 +40,12 @@ class kontakController extends Controller
     public function store(Request $request)
     {
         //
+        $kontak = new kontak;
+        $kontak->email= $request->a;
+        $kontak->seluler= $request->b;
+
+        $kontak->save();
+        return redirect('/kontak/');
     }
 
     /**
@@ -57,6 +68,12 @@ class kontakController extends Controller
     public function edit($id)
     {
         //
+        $kontak=kontak::find($id);
+        $kontak->email= $request->a;
+        $kontak->seluler= $request->b;
+
+        $kontak->save();
+        return redirect('/kontak/');
     }
 
     /**
@@ -80,5 +97,8 @@ class kontakController extends Controller
     public function destroy($id)
     {
         //
+        $kontak=kontak::findOrFail($id);
+        $kontak->delete();
+        return redirect('kontak');
     }
 }
