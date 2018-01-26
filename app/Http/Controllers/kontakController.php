@@ -44,6 +44,7 @@ class kontakController extends Controller
         $kontak->nama= $request->name;
         $kontak->email= $request->email;
         $kontak->seluler= $request->seluler;
+        $kontak->pesan= $request->pesan;
 
         $kontak->save();
         return redirect('/');
@@ -73,6 +74,7 @@ class kontakController extends Controller
         $kontak->nama= $request->c;
         $kontak->email= $request->a;
         $kontak->seluler= $request->b;
+        $kontak->pesan= $request->d;
 
         $kontak->save();
         return redirect('/kontak/');
@@ -92,6 +94,7 @@ class kontakController extends Controller
         $kontak->nama= $request->c;
         $kontak->email= $request->a;
         $kontak->seluler= $request->b;
+        $kontak->pesan= $request->d;
 
         $kontak->save();
         return redirect('/kontak/');

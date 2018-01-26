@@ -18,6 +18,7 @@ class CreateKontaksTable extends Migration
             $table->string('nama');
             $table->string('email');
             $table->string('seluler');
+            $table->string('pesan');
             $table->timestamps();
         });
     }

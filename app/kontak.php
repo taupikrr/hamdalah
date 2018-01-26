@@ -8,8 +8,8 @@ class kontak extends Model
 {
     //
     protected $table ='kontaks';
-    protected $fillable =['nama','email','seluler'];
-    protected $visible =['nama','email','seluler'];
+    protected $fillable =['nama','email','seluler','pesan'];
+    protected $visible =['nama','email','seluler','pesan'];
 
     public $timestamps =true;
 

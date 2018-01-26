@@ -17,6 +17,7 @@
                         <th>Nama</th>
                         <th>Email</th>
                         <th>Seluler</th>
+                        <th>Pesan</th>
                                         
                         <th colspan="2">Action</th>
                     </tr>
@@ -31,6 +32,7 @@
                             <td>{{$data->nama}}</td>
                             <td>{{$data->email}}</td>
                             <td>{{$data->seluler}}</td>
+                            <td>{{$data->pesan}}</td>
                             
                                 <form action="{{route('kontak.destroy',$data->id)}}" method="post">
 

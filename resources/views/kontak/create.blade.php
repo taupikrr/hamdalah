@@ -29,6 +29,12 @@
                   <label class="control_label">Seluler</label>
                   <input type="number" name="b" class="form-control" required="">
                   </div>
+
+                  <div class="form-group">
+                  <label class="control_label">Pesan</label>
+                  <input type="number" name="d" class="form-control" required="">
+                  </div>
+
                   <div>
                       <button type="submit" class="btn btn-success">
                           Simpan
