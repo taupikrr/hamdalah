@@ -33,3 +33,7 @@ Route::resource('/jenis','jeniscontroller');
 Route::resource('/kontak','kontakController');
 
 Route::get('/perumahan/{perumahan}','HomeController@filter');
+
+Route::get('/contact',function(){
+	return view('kontak');
+});

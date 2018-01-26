@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Pemasaran Rumah</title>
+    <title>Rumah Idaman</title>
 
     <!-- Bootstrap -->
     <link href="{{asset ('css/bootstrap.min.css') }}" rel="stylesheet">
@@ -34,7 +34,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html"><span>Pemasaran Rumah</span></a>
+                <a class="navbar-brand" href="index.html"><span>Rumah Idaman</span></a>
             </div>
             <div class="navbar-collapse collapse">                          
                 <div class="menu">
@@ -51,7 +51,7 @@
                             @endforeach
                           </ul>
                         </li>
-                        <li role="presentation"><a href="/">Contact</a></li>                     
+                        <li role="presentation"><a href="{{url('/contact/')}}">Contact</a></li>                     
                     </ul>
                 </div>
             </div>          

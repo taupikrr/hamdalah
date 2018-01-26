@@ -7,13 +7,14 @@
           <center><h1>Kontak</h1></center>
           <div class="panel ">
                 <div class="panel-heading bg-yellow">Kontak
-                <div class="panel-title pull-right"><a href="{{ route('kontak.create')}}">Tambah</a></div></div>
+                <div class="panel-title pull-right"><a href="{{ route('kontak.create')}}"></a></div></div>
 
                 <div class="panel-body">
                     <div class="table table-responsive">
                          <table class="table" col >
                 <thead>
                     <tr>
+                        <th>Nama</th>
                         <th>Email</th>
                         <th>Seluler</th>
                                         
@@ -27,6 +28,7 @@
                         @endphp
                         @foreach($model as $data)   
                      <tr>
+                            <td>{{$data->nama}}</td>
                             <td>{{$data->email}}</td>
                             <td>{{$data->seluler}}</td>
                             
@@ -36,7 +38,6 @@
                                 <input name="_token" type="hidden">
                                         
                             <td>
-                                <a class="btn btn-warning" href="{{ route('kontak.edit',$data->id)}}"><i class="fa fa-edit"> Edit</i></a>
                                 <input class="btn btn-danger" type="submit" value="Delete">
                                 {{csrf_field()}}
                                     </td>

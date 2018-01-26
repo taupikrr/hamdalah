@@ -41,11 +41,12 @@ class kontakController extends Controller
     {
         //
         $kontak = new kontak;
-        $kontak->email= $request->a;
-        $kontak->seluler= $request->b;
+        $kontak->nama= $request->name;
+        $kontak->email= $request->email;
+        $kontak->seluler= $request->seluler;
 
         $kontak->save();
-        return redirect('/kontak/');
+        return redirect('/');
     }
 
     /**
@@ -69,6 +70,7 @@ class kontakController extends Controller
     {
         //
         $kontak=kontak::find($id);
+        $kontak->nama= $request->c;
         $kontak->email= $request->a;
         $kontak->seluler= $request->b;
 
@@ -86,6 +88,13 @@ class kontakController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $kontak=kontak::find($id);
+        $kontak->nama= $request->c;
+        $kontak->email= $request->a;
+        $kontak->seluler= $request->b;
+
+        $kontak->save();
+        return redirect('/kontak/');
     }
 
     /**

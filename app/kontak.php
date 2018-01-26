@@ -7,9 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class kontak extends Model
 {
     //
-    protected $table ='kontak';
-    protected $fillable =['email','seluler'];
-    protected $visible =['email','seluler'];
+    protected $table ='kontaks';
+    protected $fillable =['nama','email','seluler'];
+    protected $visible =['nama','email','seluler'];
 
     public $timestamps =true;
 
